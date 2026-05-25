@@ -1,7 +1,7 @@
 {
   "name": "package-license-summary",
   "version": "0.1.0",
-  "description": "Summarize license fields from package.json files in a repository.",
+  "description": "汇总仓库 package.json 的许可证字段 / Summarize license fields from package.json files in a repository.",
   "type": "module",
   "bin": {
     "package-license-summary": "./bin/package-license-summary.js"
