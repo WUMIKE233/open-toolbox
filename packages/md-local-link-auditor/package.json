@@ -1,7 +1,7 @@
 {
   "name": "md-local-link-auditor",
   "version": "0.1.0",
-  "description": "Scan Markdown files and report broken local links.",
+  "description": "扫描 Markdown 文件并报告损坏的本地链接 / Scan Markdown files and report broken local links.",
   "type": "module",
   "bin": {
     "md-local-link-auditor": "./bin/md-local-link-auditor.js"
