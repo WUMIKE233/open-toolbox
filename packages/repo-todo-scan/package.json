@@ -1,0 +1,13 @@
+{
+  "name": "repo-todo-scan",
+  "version": "0.1.0",
+  "description": "Scan repositories for TODO-style maintenance notes.",
+  "type": "module",
+  "bin": {
+    "repo-todo-scan": "bin/repo-todo-scan.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "license": "MIT"
+}
