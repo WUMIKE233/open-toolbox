@@ -1,0 +1,16 @@
+{
+  "name": "license-header-check",
+  "version": "0.1.0",
+  "description": "Check source files for a required license header snippet.",
+  "type": "module",
+  "bin": {
+    "license-header-check": "./bin/license-header-check.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
