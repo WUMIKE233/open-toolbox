@@ -2,7 +2,7 @@
   "name": "open-toolbox",
   "version": "0.1.0",
   "private": true,
-  "description": "A small collection of dependency-free CLI tools for open-source maintainers.",
+  "description": "面向开源维护者的零依赖 CLI 工具集 / Dependency-free CLI tools for open-source maintainers.",
   "type": "module",
   "workspaces": [
     "packages/*"
