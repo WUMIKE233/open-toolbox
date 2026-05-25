@@ -1,0 +1,16 @@
+{
+  "name": "package-scripts-list",
+  "version": "0.1.0",
+  "description": "List package.json scripts across a repository.",
+  "type": "module",
+  "bin": {
+    "package-scripts-list": "./bin/package-scripts-list.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
