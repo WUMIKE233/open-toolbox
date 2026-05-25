@@ -1,7 +1,7 @@
 {
   "name": "jsonl-profile",
   "version": "0.1.0",
-  "description": "Profile JSON Lines files and summarize field coverage and types.",
+  "description": "分析 JSON Lines 字段覆盖率与类型 / Profile JSON Lines files and summarize field coverage and types.",
   "type": "module",
   "bin": {
     "jsonl-profile": "./bin/jsonl-profile.js"
