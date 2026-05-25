@@ -1,0 +1,13 @@
+{
+  "name": "file-size-budget",
+  "version": "0.1.0",
+  "description": "Check repository files against simple size budgets.",
+  "type": "module",
+  "bin": {
+    "file-size-budget": "bin/file-size-budget.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "license": "MIT"
+}

@@ -16,6 +16,8 @@ Open Toolbox is a small collection of dependency-free command line tools for mai
 | [`license-header-check`](packages/license-header-check) | Check source files for a required license header snippet. |
 | [`md-toc`](packages/md-toc) | Generate a compact Markdown table of contents from headings. |
 | [`package-scripts-list`](packages/package-scripts-list) | List `package.json` scripts across a repository. |
+| [`repo-todo-scan`](packages/repo-todo-scan) | Scan repositories for TODO-style maintenance notes. |
+| [`file-size-budget`](packages/file-size-budget) | Check repository files against simple size budgets. |
 
 ### Quick Start
 
@@ -32,6 +34,8 @@ node packages/env-example-check/bin/env-example-check.js --example .env.example 
 node packages/license-header-check/bin/license-header-check.js --root . --text "SPDX-License-Identifier: MIT"
 node packages/md-toc/bin/md-toc.js README.md
 node packages/package-scripts-list/bin/package-scripts-list.js --root .
+node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
+node packages/file-size-budget/bin/file-size-budget.js --root . --max 200kb --ext js,md,json
 ```
 
 ### Why These Tools
@@ -64,6 +68,8 @@ Open Toolbox 是一组零运行时依赖的命令行小工具，面向开源维�
 | [`license-header-check`](packages/license-header-check) | 检查源码文件是否包含指定的许可证头片段。 |
 | [`md-toc`](packages/md-toc) | 根据 Markdown 标题生成简洁的目录。 |
 | [`package-scripts-list`](packages/package-scripts-list) | 汇总仓库内各个 `package.json` 的 scripts 命令。 |
+| [`repo-todo-scan`](packages/repo-todo-scan) | 扫描仓库中的 TODO、FIXME 和可选 NOTE 维护事项。 |
+| [`file-size-budget`](packages/file-size-budget) | 按简单大小预算检查仓库文件。 |
 
 ### 快速开始
 
@@ -80,6 +86,8 @@ node packages/env-example-check/bin/env-example-check.js --example .env.example 
 node packages/license-header-check/bin/license-header-check.js --root . --text "SPDX-License-Identifier: MIT"
 node packages/md-toc/bin/md-toc.js README.md
 node packages/package-scripts-list/bin/package-scripts-list.js --root .
+node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
+node packages/file-size-budget/bin/file-size-budget.js --root . --max 200kb --ext js,md,json
 ```
 
 ### 为什么做这些工具
