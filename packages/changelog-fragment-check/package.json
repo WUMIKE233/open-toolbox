@@ -1,0 +1,16 @@
+{
+  "name": "changelog-fragment-check",
+  "version": "0.1.0",
+  "description": "Check that a changelog fragment exists and uses an allowed category.",
+  "type": "module",
+  "bin": {
+    "changelog-fragment-check": "./bin/changelog-fragment-check.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "package-license-summary",
+  "version": "0.1.0",
+  "description": "Summarize license fields from package.json files in a repository.",
+  "type": "module",
+  "bin": {
+    "package-license-summary": "./bin/package-license-summary.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
