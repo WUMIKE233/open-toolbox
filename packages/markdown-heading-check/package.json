@@ -1,7 +1,7 @@
 {
   "name": "markdown-heading-check",
   "version": "0.1.0",
-  "description": "Check Markdown headings for skipped levels and duplicates.",
+  "description": "检查 Markdown 标题层级跳跃与重复项 / Check Markdown headings for skipped levels and duplicates.",
   "type": "module",
   "bin": {
     "markdown-heading-check": "./bin/markdown-heading-check.js"
