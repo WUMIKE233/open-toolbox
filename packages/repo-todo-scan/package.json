@@ -1,7 +1,7 @@
 {
   "name": "repo-todo-scan",
   "version": "0.1.0",
-  "description": "Scan repositories for TODO-style maintenance notes.",
+  "description": "扫描仓库中的 TODO 类维护备注 / Scan repositories for TODO-style maintenance notes.",
   "type": "module",
   "bin": {
     "repo-todo-scan": "bin/repo-todo-scan.js"
