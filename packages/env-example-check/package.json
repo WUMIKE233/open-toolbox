@@ -1,0 +1,16 @@
+{
+  "name": "env-example-check",
+  "version": "0.1.0",
+  "description": "Compare .env.example with a local .env file or process environment.",
+  "type": "module",
+  "bin": {
+    "env-example-check": "./bin/env-example-check.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

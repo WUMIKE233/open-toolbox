@@ -1,0 +1,16 @@
+{
+  "name": "md-local-link-auditor",
+  "version": "0.1.0",
+  "description": "Scan Markdown files and report broken local links.",
+  "type": "module",
+  "bin": {
+    "md-local-link-auditor": "./bin/md-local-link-auditor.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
