@@ -19,6 +19,7 @@ Open Toolbox is a small collection of dependency-free command line tools for mai
 | [`repo-todo-scan`](packages/repo-todo-scan) | Scan repositories for TODO-style maintenance notes. |
 | [`file-size-budget`](packages/file-size-budget) | Check repository files against simple size budgets. |
 | [`changelog-fragment-check`](packages/changelog-fragment-check) | Check changelog fragments for allowed release-note categories. |
+| [`package-entrypoint-check`](packages/package-entrypoint-check) | Check `package.json` entrypoints for missing files. |
 | [`package-license-summary`](packages/package-license-summary) | Summarize license fields from package manifests. |
 | [`markdown-heading-check`](packages/markdown-heading-check) | Check Markdown headings for skipped levels and duplicate titles. |
 
@@ -40,6 +41,7 @@ node packages/package-scripts-list/bin/package-scripts-list.js --root .
 node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
 node packages/file-size-budget/bin/file-size-budget.js --root . --max 200kb --ext js,md,json
 node packages/changelog-fragment-check/bin/changelog-fragment-check.js --dir .changes
+node packages/package-entrypoint-check/bin/package-entrypoint-check.js --root .
 node packages/package-license-summary/bin/package-license-summary.js --root .
 node packages/markdown-heading-check/bin/markdown-heading-check.js --root .
 ```
@@ -77,6 +79,7 @@ Open Toolbox 是一组零运行时依赖的命令行小工具，面向开源维�
 | [`repo-todo-scan`](packages/repo-todo-scan) | 扫描仓库中的 TODO、FIXME 和可选 NOTE 维护事项。 |
 | [`file-size-budget`](packages/file-size-budget) | 按简单大小预算检查仓库文件。 |
 | [`changelog-fragment-check`](packages/changelog-fragment-check) | 检查变更片段是否使用允许的发布说明分类。 |
+| [`package-entrypoint-check`](packages/package-entrypoint-check) | 检查 `package.json` 入口文件是否缺失。 |
 | [`package-license-summary`](packages/package-license-summary) | 汇总包清单中的许可证字段。 |
 | [`markdown-heading-check`](packages/markdown-heading-check) | 检查 Markdown 标题跳级和重复标题。 |
 
@@ -98,6 +101,7 @@ node packages/package-scripts-list/bin/package-scripts-list.js --root .
 node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
 node packages/file-size-budget/bin/file-size-budget.js --root . --max 200kb --ext js,md,json
 node packages/changelog-fragment-check/bin/changelog-fragment-check.js --dir .changes
+node packages/package-entrypoint-check/bin/package-entrypoint-check.js --root .
 node packages/package-license-summary/bin/package-license-summary.js --root .
 node packages/markdown-heading-check/bin/markdown-heading-check.js --root .
 ```
