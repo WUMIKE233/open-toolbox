@@ -19,6 +19,7 @@ Open Toolbox is a small collection of dependency-free command line tools for mai
 | [`license-header-check`](packages/license-header-check) | Check source files for a required license header snippet. |
 | [`package-scripts-list`](packages/package-scripts-list) | List `package.json` scripts across a repository. |
 | [`package-license-summary`](packages/package-license-summary) | Summarize license fields from package manifests. |
+| [`package-entrypoint-check`](packages/package-entrypoint-check) | Check `package.json` entrypoints for missing files. |
 | [`package-name-scope-check`](packages/package-name-scope-check) | Check package names against an expected npm scope or prefix. |
 | [`repo-todo-scan`](packages/repo-todo-scan) | Scan repositories for TODO-style maintenance notes. |
 | [`repo-language-stats`](packages/repo-language-stats) | Summarize repository files, bytes, and lines by language. |
@@ -43,6 +44,7 @@ node packages/env-example-check/bin/env-example-check.js --example .env.example 
 node packages/license-header-check/bin/license-header-check.js --root . --text "SPDX-License-Identifier: MIT"
 node packages/package-scripts-list/bin/package-scripts-list.js --root .
 node packages/package-license-summary/bin/package-license-summary.js --root .
+node packages/package-entrypoint-check/bin/package-entrypoint-check.js --root .
 node packages/package-name-scope-check/bin/package-name-scope-check.js --root .
 node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
 node packages/repo-language-stats/bin/repo-language-stats.js --root .
@@ -83,6 +85,7 @@ Open Toolbox 是一组零运行时依赖的命令行小工具，面向开源维�
 | [`license-header-check`](packages/license-header-check) | 检查源代码文件是否包含指定的许可证头片段。 |
 | [`package-scripts-list`](packages/package-scripts-list) | 汇总仓库内各个 `package.json` 的 scripts 命令。 |
 | [`package-license-summary`](packages/package-license-summary) | 汇总包清单中的许可证字段。 |
+| [`package-entrypoint-check`](packages/package-entrypoint-check) | 检查 `package.json` 入口文件是否缺失。 |
 | [`package-name-scope-check`](packages/package-name-scope-check) | 检查包名是否符合预期的 npm scope 或前缀。 |
 | [`repo-todo-scan`](packages/repo-todo-scan) | 扫描仓库中的 TODO 类维护事项。 |
 | [`repo-language-stats`](packages/repo-language-stats) | 按语言汇总仓库文件数、字节数和行数。 |
@@ -107,6 +110,7 @@ node packages/env-example-check/bin/env-example-check.js --example .env.example 
 node packages/license-header-check/bin/license-header-check.js --root . --text "SPDX-License-Identifier: MIT"
 node packages/package-scripts-list/bin/package-scripts-list.js --root .
 node packages/package-license-summary/bin/package-license-summary.js --root .
+node packages/package-entrypoint-check/bin/package-entrypoint-check.js --root .
 node packages/package-name-scope-check/bin/package-name-scope-check.js --root .
 node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
 node packages/repo-language-stats/bin/repo-language-stats.js --root .

@@ -1,7 +1,7 @@
 {
   "name": "md-toc",
   "version": "0.1.0",
-  "description": "Generate a compact Markdown table of contents from headings.",
+  "description": "根据标题生成紧凑 Markdown 目录 / Generate a compact Markdown table of contents from headings.",
   "type": "module",
   "bin": {
     "md-toc": "./bin/md-toc.js"

@@ -1,7 +1,7 @@
 {
   "name": "license-header-check",
   "version": "0.1.0",
-  "description": "Check source files for a required license header snippet.",
+  "description": "检查源码是否包含指定许可证头 / Check source files for a required license header snippet.",
   "type": "module",
   "bin": {
     "license-header-check": "./bin/license-header-check.js"

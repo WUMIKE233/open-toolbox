@@ -1,7 +1,7 @@
 {
   "name": "changelog-fragment-check",
   "version": "0.1.0",
-  "description": "Check that a changelog fragment exists and uses an allowed category.",
+  "description": "检查 changelog fragment 是否存在并符合分类规则 / Check changelog fragments for required presence and allowed categories.",
   "type": "module",
   "bin": {
     "changelog-fragment-check": "./bin/changelog-fragment-check.js"
