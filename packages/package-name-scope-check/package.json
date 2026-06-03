@@ -1,0 +1,16 @@
+{
+  "name": "package-name-scope-check",
+  "version": "0.1.0",
+  "description": "Check package names against an expected scope or prefix.",
+  "type": "module",
+  "bin": {
+    "package-name-scope-check": "./bin/package-name-scope-check.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

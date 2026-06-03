@@ -11,16 +11,19 @@ Open Toolbox is a small collection of dependency-free command line tools for mai
 | Project | Purpose |
 | --- | --- |
 | [`md-local-link-auditor`](packages/md-local-link-auditor) | Scan Markdown files and report broken local links. |
+| [`md-external-link-report`](packages/md-external-link-report) | Report external HTTP(S) links from Markdown files without network checks. |
+| [`markdown-heading-check`](packages/markdown-heading-check) | Check Markdown headings for skipped levels and duplicate titles. |
+| [`md-toc`](packages/md-toc) | Generate a compact Markdown table of contents from headings. |
 | [`jsonl-profile`](packages/jsonl-profile) | Profile JSON Lines files and summarize field coverage and types. |
 | [`env-example-check`](packages/env-example-check) | Compare `.env.example` with a local `.env` file or process environment. |
 | [`license-header-check`](packages/license-header-check) | Check source files for a required license header snippet. |
-| [`md-toc`](packages/md-toc) | Generate a compact Markdown table of contents from headings. |
 | [`package-scripts-list`](packages/package-scripts-list) | List `package.json` scripts across a repository. |
+| [`package-license-summary`](packages/package-license-summary) | Summarize license fields from package manifests. |
+| [`package-name-scope-check`](packages/package-name-scope-check) | Check package names against an expected npm scope or prefix. |
 | [`repo-todo-scan`](packages/repo-todo-scan) | Scan repositories for TODO-style maintenance notes. |
+| [`repo-language-stats`](packages/repo-language-stats) | Summarize repository files, bytes, and lines by language. |
 | [`file-size-budget`](packages/file-size-budget) | Check repository files against simple size budgets. |
 | [`changelog-fragment-check`](packages/changelog-fragment-check) | Check changelog fragments for allowed release-note categories. |
-| [`package-license-summary`](packages/package-license-summary) | Summarize license fields from package manifests. |
-| [`markdown-heading-check`](packages/markdown-heading-check) | Check Markdown headings for skipped levels and duplicate titles. |
 
 ### Quick Start
 
@@ -32,16 +35,19 @@ Each package can also be used directly with Node:
 
 ```bash
 node packages/md-local-link-auditor/bin/md-local-link-auditor.js --root .
+node packages/md-external-link-report/bin/md-external-link-report.js --root .
+node packages/markdown-heading-check/bin/markdown-heading-check.js --root .
+node packages/md-toc/bin/md-toc.js README.md
 node packages/jsonl-profile/bin/jsonl-profile.js ./data.jsonl
 node packages/env-example-check/bin/env-example-check.js --example .env.example --env .env
 node packages/license-header-check/bin/license-header-check.js --root . --text "SPDX-License-Identifier: MIT"
-node packages/md-toc/bin/md-toc.js README.md
 node packages/package-scripts-list/bin/package-scripts-list.js --root .
+node packages/package-license-summary/bin/package-license-summary.js --root .
+node packages/package-name-scope-check/bin/package-name-scope-check.js --root .
 node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
+node packages/repo-language-stats/bin/repo-language-stats.js --root .
 node packages/file-size-budget/bin/file-size-budget.js --root . --max 200kb --ext js,md,json
 node packages/changelog-fragment-check/bin/changelog-fragment-check.js --dir .changes
-node packages/package-license-summary/bin/package-license-summary.js --root .
-node packages/markdown-heading-check/bin/markdown-heading-check.js --root .
 ```
 
 ### Why These Tools
@@ -69,16 +75,19 @@ Open Toolbox 是一组零运行时依赖的命令行小工具，面向开源维�
 | 项目 | 用途 |
 | --- | --- |
 | [`md-local-link-auditor`](packages/md-local-link-auditor) | 扫描 Markdown 文件并报告失效的本地链接。 |
-| [`jsonl-profile`](packages/jsonl-profile) | 分析 JSON Lines 文件，汇总字段覆盖率与字段类型。 |
+| [`md-external-link-report`](packages/md-external-link-report) | 统计 Markdown 文件中的外部 HTTP(S) 链接，不进行网络检查。 |
+| [`markdown-heading-check`](packages/markdown-heading-check) | 检查 Markdown 标题跳级和重复标题。 |
+| [`md-toc`](packages/md-toc) | 根据 Markdown 标题生成简洁目录。 |
+| [`jsonl-profile`](packages/jsonl-profile) | 分析 JSON Lines 文件，汇总字段覆盖率和类型。 |
 | [`env-example-check`](packages/env-example-check) | 对比 `.env.example` 与本地 `.env` 文件或当前进程环境变量。 |
-| [`license-header-check`](packages/license-header-check) | 检查源码文件是否包含指定的许可证头片段。 |
-| [`md-toc`](packages/md-toc) | 根据 Markdown 标题生成简洁的目录。 |
+| [`license-header-check`](packages/license-header-check) | 检查源代码文件是否包含指定的许可证头片段。 |
 | [`package-scripts-list`](packages/package-scripts-list) | 汇总仓库内各个 `package.json` 的 scripts 命令。 |
-| [`repo-todo-scan`](packages/repo-todo-scan) | 扫描仓库中的 TODO、FIXME 和可选 NOTE 维护事项。 |
+| [`package-license-summary`](packages/package-license-summary) | 汇总包清单中的许可证字段。 |
+| [`package-name-scope-check`](packages/package-name-scope-check) | 检查包名是否符合预期的 npm scope 或前缀。 |
+| [`repo-todo-scan`](packages/repo-todo-scan) | 扫描仓库中的 TODO 类维护事项。 |
+| [`repo-language-stats`](packages/repo-language-stats) | 按语言汇总仓库文件数、字节数和行数。 |
 | [`file-size-budget`](packages/file-size-budget) | 按简单大小预算检查仓库文件。 |
 | [`changelog-fragment-check`](packages/changelog-fragment-check) | 检查变更片段是否使用允许的发布说明分类。 |
-| [`package-license-summary`](packages/package-license-summary) | 汇总包清单中的许可证字段。 |
-| [`markdown-heading-check`](packages/markdown-heading-check) | 检查 Markdown 标题跳级和重复标题。 |
 
 ### 快速开始
 
@@ -90,21 +99,24 @@ npm test
 
 ```bash
 node packages/md-local-link-auditor/bin/md-local-link-auditor.js --root .
+node packages/md-external-link-report/bin/md-external-link-report.js --root .
+node packages/markdown-heading-check/bin/markdown-heading-check.js --root .
+node packages/md-toc/bin/md-toc.js README.md
 node packages/jsonl-profile/bin/jsonl-profile.js ./data.jsonl
 node packages/env-example-check/bin/env-example-check.js --example .env.example --env .env
 node packages/license-header-check/bin/license-header-check.js --root . --text "SPDX-License-Identifier: MIT"
-node packages/md-toc/bin/md-toc.js README.md
 node packages/package-scripts-list/bin/package-scripts-list.js --root .
+node packages/package-license-summary/bin/package-license-summary.js --root .
+node packages/package-name-scope-check/bin/package-name-scope-check.js --root .
 node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
+node packages/repo-language-stats/bin/repo-language-stats.js --root .
 node packages/file-size-budget/bin/file-size-budget.js --root . --max 200kb --ext js,md,json
 node packages/changelog-fragment-check/bin/changelog-fragment-check.js --dir .changes
-node packages/package-license-summary/bin/package-license-summary.js --root .
-node packages/markdown-heading-check/bin/markdown-heading-check.js --root .
 ```
 
 ### 为什么做这些工具
 
-这些项目刻意保持小巧、直接、易维护。它们避免运行时依赖，配有聚焦的测试，并解决开源仓库中常见却容易被重复写成临时脚本的维护任务。
+这些项目刻意保持小巧、直接、易维护。它们避免运行时依赖，配有聚焦的测试，并解决开源仓库中常见但容易被重复写成临时脚本的维护任务。
 
 ### 开发
 

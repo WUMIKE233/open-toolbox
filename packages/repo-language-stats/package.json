@@ -1,0 +1,16 @@
+{
+  "name": "repo-language-stats",
+  "version": "0.1.0",
+  "description": "Summarize repository files, bytes, and lines by language.",
+  "type": "module",
+  "bin": {
+    "repo-language-stats": "./bin/repo-language-stats.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

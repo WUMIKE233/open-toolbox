@@ -1,0 +1,16 @@
+{
+  "name": "md-external-link-report",
+  "version": "0.1.0",
+  "description": "Report external HTTP(S) links from Markdown files.",
+  "type": "module",
+  "bin": {
+    "md-external-link-report": "./bin/md-external-link-report.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
