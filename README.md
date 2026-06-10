@@ -21,6 +21,7 @@ Open Toolbox is a small collection of dependency-free command line tools for mai
 | [`package-license-summary`](packages/package-license-summary) | Summarize license fields from package manifests. |
 | [`package-entrypoint-check`](packages/package-entrypoint-check) | Check `package.json` entrypoints for missing files. |
 | [`package-name-scope-check`](packages/package-name-scope-check) | Check package names against an expected npm scope or prefix. |
+| [`readme-locale-check`](packages/readme-locale-check) | Check README files for required Chinese and English language signals. |
 | [`repo-todo-scan`](packages/repo-todo-scan) | Scan repositories for TODO-style maintenance notes. |
 | [`repo-language-stats`](packages/repo-language-stats) | Summarize repository files, bytes, and lines by language. |
 | [`file-size-budget`](packages/file-size-budget) | Check repository files against simple size budgets. |
@@ -46,6 +47,7 @@ node packages/package-scripts-list/bin/package-scripts-list.js --root .
 node packages/package-license-summary/bin/package-license-summary.js --root .
 node packages/package-entrypoint-check/bin/package-entrypoint-check.js --root .
 node packages/package-name-scope-check/bin/package-name-scope-check.js --root .
+node packages/readme-locale-check/bin/readme-locale-check.js --root .
 node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
 node packages/repo-language-stats/bin/repo-language-stats.js --root .
 node packages/file-size-budget/bin/file-size-budget.js --root . --max 200kb --ext js,md,json
@@ -87,6 +89,7 @@ Open Toolbox 是一组零运行时依赖的命令行小工具，面向开源维�
 | [`package-license-summary`](packages/package-license-summary) | 汇总包清单中的许可证字段。 |
 | [`package-entrypoint-check`](packages/package-entrypoint-check) | 检查 `package.json` 入口文件是否缺失。 |
 | [`package-name-scope-check`](packages/package-name-scope-check) | 检查包名是否符合预期的 npm scope 或前缀。 |
+| [`readme-locale-check`](packages/readme-locale-check) | 检查 README 是否包含要求的中文和英文信号。 |
 | [`repo-todo-scan`](packages/repo-todo-scan) | 扫描仓库中的 TODO 类维护事项。 |
 | [`repo-language-stats`](packages/repo-language-stats) | 按语言汇总仓库文件数、字节数和行数。 |
 | [`file-size-budget`](packages/file-size-budget) | 按简单大小预算检查仓库文件。 |
@@ -112,6 +115,7 @@ node packages/package-scripts-list/bin/package-scripts-list.js --root .
 node packages/package-license-summary/bin/package-license-summary.js --root .
 node packages/package-entrypoint-check/bin/package-entrypoint-check.js --root .
 node packages/package-name-scope-check/bin/package-name-scope-check.js --root .
+node packages/readme-locale-check/bin/readme-locale-check.js --root .
 node packages/repo-todo-scan/bin/repo-todo-scan.js --root .
 node packages/repo-language-stats/bin/repo-language-stats.js --root .
 node packages/file-size-budget/bin/file-size-budget.js --root . --max 200kb --ext js,md,json

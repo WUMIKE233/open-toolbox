@@ -1,0 +1,12 @@
+{
+  "name": "readme-locale-check",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "readme-locale-check": "bin/readme-locale-check.js"
+  },
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "license": "MIT"
+}
