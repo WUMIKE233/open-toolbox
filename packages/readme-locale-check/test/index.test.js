@@ -14,6 +14,8 @@ test("passes when README contains Chinese and English text", async () => {
   assert.equal(result.ok, true);
   assert.equal(result.hasChinese, true);
   assert.equal(result.hasEnglish, true);
+  assert.equal(result.chineseChars, 3);
+  assert.equal(result.englishWords, 3);
   assert.deepEqual(result.problems, []);
 });
 
@@ -34,4 +36,17 @@ test("allows language requirements to be relaxed", async () => {
   const result = await checkReadmeLocale({ root, requireChinese: false });
 
   assert.equal(result.ok, true);
+});
+
+test("enforces minimum language volume", async () => {
+  const root = await mkdtemp(path.join(os.tmpdir(), "readme-locale-"));
+  await writeFile(path.join(root, "README.md"), "# 工具箱\n\nEnglish quick start.\n", "utf8");
+
+  const result = await checkReadmeLocale({ root, minChineseChars: 5, minEnglishWords: 4 });
+
+  assert.equal(result.ok, false);
+  assert.deepEqual(result.problems, [
+    "README has 3 Chinese character(s), below minimum 5",
+    "README has 3 English word(s), below minimum 4"
+  ]);
 });

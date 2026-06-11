@@ -6,6 +6,8 @@ function parseArgs(argv) {
     root: process.cwd(),
     requireChinese: true,
     requireEnglish: true,
+    minChineseChars: 1,
+    minEnglishWords: 1,
     json: false
   };
 
@@ -21,6 +23,12 @@ function parseArgs(argv) {
       options.requireChinese = false;
     } else if (arg === "--no-english") {
       options.requireEnglish = false;
+    } else if (arg === "--min-chinese-chars") {
+      options.minChineseChars = Number(argv[index + 1]);
+      index += 1;
+    } else if (arg === "--min-english-words") {
+      options.minEnglishWords = Number(argv[index + 1]);
+      index += 1;
     } else if (arg === "--json") {
       options.json = true;
     } else if (arg === "--help" || arg === "-h") {
@@ -44,6 +52,8 @@ Options:
   --file <path>      README path relative to --root.
   --no-chinese       Do not require Chinese text.
   --no-english       Do not require English text.
+  --min-chinese-chars <n> Require at least n Chinese characters when Chinese is required.
+  --min-english-words <n> Require at least n English words when English is required.
   --json             Print machine-readable JSON.
   -h, --help         Show help.`);
 }

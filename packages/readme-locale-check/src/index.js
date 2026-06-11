@@ -8,7 +8,9 @@ export async function checkReadmeLocale({
   root = process.cwd(),
   file,
   requireChinese = true,
-  requireEnglish = true
+  requireEnglish = true,
+  minChineseChars = 1,
+  minEnglishWords = 1
 } = {}) {
   const absoluteRoot = path.resolve(root);
   const readmePath = file ? path.resolve(absoluteRoot, file) : await findReadme(absoluteRoot);
@@ -20,20 +22,28 @@ export async function checkReadmeLocale({
       ok: false,
       hasChinese: false,
       hasEnglish: false,
+      chineseChars: 0,
+      englishWords: 0,
       problems: ["README file not found"]
     };
   }
 
   const text = await readFile(readmePath, "utf8");
-  const hasChinese = CJK_PATTERN.test(text);
-  const hasEnglish = ENGLISH_PATTERN.test(text);
+  const chineseChars = (text.match(new RegExp(CJK_PATTERN, "g")) ?? []).length;
+  const englishWords = (text.match(new RegExp(ENGLISH_PATTERN, "g")) ?? []).length;
+  const hasChinese = chineseChars > 0;
+  const hasEnglish = englishWords > 0;
   const problems = [];
 
   if (requireChinese && !hasChinese) {
     problems.push("README does not contain Chinese text");
+  } else if (requireChinese && chineseChars < minChineseChars) {
+    problems.push(`README has ${chineseChars} Chinese character(s), below minimum ${minChineseChars}`);
   }
   if (requireEnglish && !hasEnglish) {
     problems.push("README does not contain English text");
+  } else if (requireEnglish && englishWords < minEnglishWords) {
+    problems.push(`README has ${englishWords} English word(s), below minimum ${minEnglishWords}`);
   }
 
   return {
@@ -42,6 +52,8 @@ export async function checkReadmeLocale({
     ok: problems.length === 0,
     hasChinese,
     hasEnglish,
+    chineseChars,
+    englishWords,
     problems
   };
 }

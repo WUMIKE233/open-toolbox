@@ -11,6 +11,7 @@
 ```bash
 node packages/readme-locale-check/bin/readme-locale-check.js --root .
 node packages/readme-locale-check/bin/readme-locale-check.js --root . --json
+node packages/readme-locale-check/bin/readme-locale-check.js --root . --min-chinese-chars 20 --min-english-words 20
 ```
 
 Options:
@@ -19,6 +20,8 @@ Options:
 - `--file <path>`: README path relative to `--root`.
 - `--no-chinese`: do not require Chinese text.
 - `--no-english`: do not require English text.
+- `--min-chinese-chars <n>`: require at least `n` Chinese characters when Chinese is required.
+- `--min-english-words <n>`: require at least `n` English words when English is required.
 - `--json`: print machine-readable JSON.
 
 ## 中文
@@ -30,6 +33,7 @@ Options:
 ```bash
 node packages/readme-locale-check/bin/readme-locale-check.js --root .
 node packages/readme-locale-check/bin/readme-locale-check.js --root . --json
+node packages/readme-locale-check/bin/readme-locale-check.js --root . --min-chinese-chars 20 --min-english-words 20
 ```
 
 参数说明：
@@ -38,4 +42,6 @@ node packages/readme-locale-check/bin/readme-locale-check.js --root . --json
 - `--file <path>`：相对 `--root` 的 README 路径。
 - `--no-chinese`：不强制要求中文。
 - `--no-english`：不强制要求英文。
+- `--min-chinese-chars <n>`：要求至少包含 `n` 个中文字符。
+- `--min-english-words <n>`：要求至少包含 `n` 个英文词。
 - `--json`：输出机器可读 JSON。
